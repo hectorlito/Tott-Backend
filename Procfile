@@ -1,1 +1,2 @@
-web: gunicorn project_name.wsgi
+web: gunicorn tott-backend.wsgi —-log-file -
+

@@ -2,8 +2,8 @@ from django.shortcuts import render
 from rest_framework import generics
 # Create your views here.
 
-from .models import Blog
-from .serializers import BlogSerializer
+from .models import Blog, FM
+from .serializers import BlogSerializer, FMSerializer
 
 
 class ListBlog(generics.ListCreateAPIView):
@@ -14,3 +14,13 @@ class ListBlog(generics.ListCreateAPIView):
 class DetailBlog(generics.RetrieveUpdateDestroyAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
+
+
+class ListFM(generics.ListCreateAPIView):
+    queryset = FM.objects.all()
+    serializer_class = FMSerializer
+
+
+class DetailFM(generics.RetrieveUpdateDestroyAPIView):
+    queryset = FM.objects.all()
+    serializer_class = FMSerializer

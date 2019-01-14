@@ -10,3 +10,11 @@ class Blog(models.Model):
     def __str__(self):
         """A string representation of the model."""
         return self.title
+
+
+class FM(models.Model):
+    challenge = models.CharField(max_length=500)
+    writeup = models.TextField()
+
+    def __str__(self):
+        return self.challenge

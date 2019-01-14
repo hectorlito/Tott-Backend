@@ -3,7 +3,7 @@ from rest_framework import generics
 # Create your views here.
 
 from .models import Blog, FM
-from .serializers import BlogSerializer
+from .serializers import BlogSerializer, FMSerializer
 
 
 class ListBlog(generics.ListCreateAPIView):
